@@ -1,10 +1,14 @@
-import './App.css';
-import { NavBar } from './Components/NavBar';
+import "./App.css";
+import { Menu } from "./Components/Menu/Menu";
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <div style={{display: "flex", justifyContent: "center"}}>
+     
+      <Menu></Menu>
+      </div>
     </div>
   );
 }

@@ -7,17 +7,26 @@ const navStyles = {
   justifyContent: "space-between",
 };
 
+const buttonStyles = {
+  justifyContent: "space-between",
+  color: "white",
+  fontSize: { sm: "15px", md: "20px" },
+};
+
 export const NavBar = () => {
   const navItems = ["About Me", "Projects", "Resume", "Contact"];
   return (
     <div>
       <AppBar sx={navStyles}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", padding: "20px"}}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "20px",
+          }}
+        >
           {navItems.map((item) => (
-            <Button
-              sx={{ justifyContent: "space-between", color: "white", fontSize: "15px" }}
-              key={item}
-            >
+            <Button sx={buttonStyles} key={item}>
               {item}
             </Button>
           ))}
