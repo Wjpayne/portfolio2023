@@ -63,7 +63,7 @@ export const AboutModal = (props) => {
           <div className = "skills">
           <Fade in={textFade} timeout={1500}>
             <Typography align="center" className={classes.textMain}>
-              Hello! My name is William. I am a software enginner with a focus
+              Hello! My name is William. I am a software engineer with a focus
               on front-end web development.<br></br>I am proficient in the
               following technologies. <br></br> <br></br>{" "}
 
@@ -84,7 +84,7 @@ export const AboutModal = (props) => {
                       title="Node"
                     />
                                         <Skill
-                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                       alt="The logo icon for Express"
                       title="Express"
                     />

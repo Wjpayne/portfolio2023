@@ -51,6 +51,7 @@ const modalContactStyles = makeStyles()((theme) => {
         backgroundColor: "white",
       },
       fontSize: "20px",
+      margin: "15px"
     },
   };
 });
