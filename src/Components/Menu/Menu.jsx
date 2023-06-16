@@ -11,7 +11,8 @@ const menuStyles = makeStyles()((theme) => {
     paper: {
       position: "relative",
       width: "1200px",
-      height: "675px",
+      height: "670px",
+      marginBottom: "25px",
 
       [theme.breakpoints.down("lg")]: {
         width: "900px",
