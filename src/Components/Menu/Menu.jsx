@@ -72,7 +72,7 @@ const menuStyles = makeStyles()((theme) => {
     // about text and responsive attributes
     about: {
       left: "447px",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       color: "#2565ae",
       textDecoration: "none",
@@ -80,10 +80,7 @@ const menuStyles = makeStyles()((theme) => {
         left: "340px",
         top: "300px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "280px",
-        top: "295px",
-      },
+
       [theme.breakpoints.down("sm")]: {
         left: "147px",
         top: "135px",
@@ -95,7 +92,7 @@ const menuStyles = makeStyles()((theme) => {
       transition: "1s",
       transform: "rotate(90deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       color: "#2565ae",
       textDecoration: "none",
@@ -116,7 +113,7 @@ const menuStyles = makeStyles()((theme) => {
       transition: "1s",
       transform: "rotate(100deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       color: "#2565ae",
       textDecoration: "none",
@@ -136,7 +133,7 @@ const menuStyles = makeStyles()((theme) => {
       transition: "1s",
       transform: "rotate(80deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       color: "#2565ae",
       textDecoration: "none",
@@ -154,7 +151,7 @@ const menuStyles = makeStyles()((theme) => {
     //project text and responsive attributes
 
     project: {
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "625px",
       color: "#2565ae",
@@ -173,7 +170,7 @@ const menuStyles = makeStyles()((theme) => {
     projectRotate: {
       transform: "rotate(90deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "625px",
       color: "#2565ae",
@@ -193,7 +190,7 @@ const menuStyles = makeStyles()((theme) => {
     projectRotateTwo: {
       transform: "rotate(100deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "625px",
       color: "#2565ae",
@@ -213,7 +210,7 @@ const menuStyles = makeStyles()((theme) => {
     projectRotateThree: {
       transform: "rotate(80deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "625px",
       color: "#2565ae",
@@ -233,7 +230,7 @@ const menuStyles = makeStyles()((theme) => {
     //resume text and responsive attributes
 
     resume: {
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "828px",
       color: "#2565ae",
@@ -250,7 +247,7 @@ const menuStyles = makeStyles()((theme) => {
     },
 
     resumeRotate: {
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "828px",
       color: "#2565ae",
@@ -272,7 +269,7 @@ const menuStyles = makeStyles()((theme) => {
     resumeRotateTwo: {
       transform: "rotate(100deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "828px",
       color: "#2565ae",
@@ -292,7 +289,7 @@ const menuStyles = makeStyles()((theme) => {
     resumeRotateThree: {
       transform: "rotate(80deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "828px",
       color: "#2565ae",
@@ -312,7 +309,7 @@ const menuStyles = makeStyles()((theme) => {
     //contact text and responsive attributes
 
     contact: {
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "1025px",
       color: "#2565ae",
@@ -330,7 +327,7 @@ const menuStyles = makeStyles()((theme) => {
     contactRotate: {
       transform: "rotate(90deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "1025px",
       color: "#2565ae",
@@ -350,7 +347,7 @@ const menuStyles = makeStyles()((theme) => {
     contactRotateTwo: {
       transform: "rotate(100deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "1025px",
       color: "#2565ae",
@@ -370,7 +367,7 @@ const menuStyles = makeStyles()((theme) => {
     contactRotateThree: {
       transform: "rotate(80deg)",
       transformOrigin: "0 50%",
-      top: "415px",
+      top: "385px",
       position: "absolute",
       left: "1025px",
       color: "#2565ae",
