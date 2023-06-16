@@ -435,15 +435,18 @@ export const Menu = () => {
   const [modalAbout, setModalAbout] = useState(false);
   const [modalProject, setModalProject] = useState(false);
   const [modalContact, setModalContact] = useState(false);
+  const [textFade, setTextFade] = useState(false);
 
   //handlers for modal open and close
 
   const handleAboutModalOpen = () => {
     setModalAbout(true);
+    setTextFade(true);
   };
 
   const handleAboutModalClose = () => {
     setModalAbout(false);
+    setTextFade(false);
   };
 
   const handleProjectModalOpen = () => {
@@ -461,6 +464,8 @@ export const Menu = () => {
   const handleContactModalClose = () => {
     setModalContact(false);
   };
+
+  //set init state
 
   const [about, setAbout] = useState(false);
   const [project, setProject] = useState(false);
@@ -614,6 +619,7 @@ export const Menu = () => {
         <AboutModal
           handleAboutModalClose={handleAboutModalClose}
           modalAbout={modalAbout}
+          textFade={textFade}
         ></AboutModal>
 
         <div
