@@ -1,7 +1,17 @@
-import { Modal, Typography, Paper } from '@mui/material'
-import React from 'react'
-import CloseIcon from '@mui/icons-material/Close';
-import { makeStyles } from 'tss-react/mui';
+import {
+  Modal,
+  Paper,
+  TextField,
+  FormControl,
+  FormLabel,
+  Button,
+  Alert,
+} from "@mui/material";
+import React, { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import { makeStyles } from "tss-react/mui";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const modalContactStyles = makeStyles()((theme) => {
   return {
@@ -27,39 +37,115 @@ const modalContactStyles = makeStyles()((theme) => {
       },
     },
 
-    textMain: {
-      color: "#2565ae",
-      fontSize: "20px",
+    input: {
       margin: "20px",
+    },
+
+    inputMessage: {
+      margin: "20px",
+      height: "100px",
+    },
+
+    button: {
+      "&:hover": {
+        backgroundColor: "white",
+      },
+      fontSize: "20px",
     },
   };
 });
 export const ContactModal = (props) => {
+  const { handleContactModalClose, modalContact, success, setSuccess } = props;
 
-    const {handleContactModalClose, modalContact} = props
+  const { classes } = modalContactStyles();
 
-    const {classes} = modalContactStyles() 
+  //set up for contact form
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_j7b1xz2",
+        "template_14fp4jr",
+        e.target,
+        "oMjHK1YLzz_lDQSQp"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  };
   return (
-<>
-        <Modal
-        open = {modalContact}
-        onClose = {handleContactModalClose}
+    <>
+      <Modal
+        open={modalContact}
+        onClose={handleContactModalClose}
         aria-labelledby="about modal"
         aria-describedby="about william payne"
-        >
-        <Paper className = {classes.modal}>
+      >
+        <Paper className={classes.modal}>
+          <form onSubmit={sendEmail}>
             <CloseIcon
-            sx = {{position: "absolute", top: "0", right: "0", margin: "10px", cursor: "pointer"}}
-            onClick = {handleContactModalClose}
-            >
+              sx={{
+                position: "absolute",
+                top: "0",
+                right: "0",
+                margin: "10px",
+                cursor: "pointer",
+              }}
+              onClick={handleContactModalClose}
+            ></CloseIcon>
 
-            </CloseIcon>
-            hello
+            <FormControl>
+              <FormLabel
+                sx={{ color: "#2565ae", fontSize: "30px", display: "flex", justifyContent: "center", margin: "10px" }}
+              >
+                Feel free to contact me!
+              </FormLabel>
+              <TextField
+                name="from_name"
+                className={classes.input}
+                required
+                type="text"
+                label="Enter name"
+              ></TextField>
+              <TextField
+                name="user_email"
+                className={classes.input}
+                required
+                type="email"
+                label="Enter your email"
+              ></TextField>
+              <TextField
+                name="message"
+                className={classes.inputMessage}
+                required
+                type="text"
+                label="Enter your message"
+                multiline={true}
+                rows={5}
+              ></TextField>
+
+              <Button type="submit" disableRipple className={classes.button}>
+                Submit
+              </Button>
+              {success && (
+                <Alert severity="success" sx = {{fontSize: "20px"}}>
+                  Thank you! I will get back to you shortly
+                </Alert>
+              )}
+            </FormControl>
+          </form>
         </Paper>
-
-        </Modal>
-
+      </Modal>
     </>
-  )
-}
+  );
+};

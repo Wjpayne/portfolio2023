@@ -435,6 +435,7 @@ export const Menu = () => {
   const [modalProject, setModalProject] = useState(false);
   const [modalContact, setModalContact] = useState(false);
   const [textFade, setTextFade] = useState(false);
+  const [success, setSuccess] = useState(false)
 
   //handlers for modal open and close
 
@@ -462,6 +463,7 @@ export const Menu = () => {
 
   const handleContactModalClose = () => {
     setModalContact(false);
+    setSuccess(false)
   };
 
   //set init state
@@ -653,8 +655,10 @@ export const Menu = () => {
         <ContactModal
           handleContactModalClose={handleContactModalClose}
           modalContact={modalContact}
+          success = {success}
+          setSuccess  = {setSuccess}
         ></ContactModal>
-        <SVG handleAboutModalOpen = {handleAboutModalOpen} handleProjectModalOpen = {handleProjectModalOpen}/>
+        <SVG handleAboutModalOpen = {handleAboutModalOpen} handleProjectModalOpen = {handleProjectModalOpen} handleContactModalOpen = {handleContactModalOpen}/>
       </Paper>
     </div>
   );
