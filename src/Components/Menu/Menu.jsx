@@ -334,7 +334,7 @@ const menuStyles = makeStyles()((theme) => {
       transition: "1s",
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
-        left: "780px",
+        left: "768px",
         top: "295px",
       },
 
