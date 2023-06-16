@@ -75,11 +75,11 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "340px",
-        top: "320px",
+        top: "300px",
       },
       [theme.breakpoints.down("md")]: {
         left: "280px",
-        top: "320px",
+        top: "295px",
       },
       [theme.breakpoints.down("sm")]: {
         left: "147px",
@@ -99,7 +99,7 @@ const menuStyles = makeStyles()((theme) => {
 
       [theme.breakpoints.down("lg")]: {
         left: "340px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -119,7 +119,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "340px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -139,7 +139,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "340px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -158,7 +158,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "465px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -178,7 +178,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "465px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -198,7 +198,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "465px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -218,7 +218,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "465px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -237,7 +237,7 @@ const menuStyles = makeStyles()((theme) => {
 
       [theme.breakpoints.down("lg")]: {
         left: "623px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -257,7 +257,7 @@ const menuStyles = makeStyles()((theme) => {
 
       [theme.breakpoints.down("lg")]: {
         left: "623px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -277,7 +277,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "623px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -297,7 +297,7 @@ const menuStyles = makeStyles()((theme) => {
 
       [theme.breakpoints.down("lg")]: {
         left: "623px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -316,11 +316,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "780px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("md")]: {
-        left: "770px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -339,11 +335,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "780px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("md")]: {
-        left: "770px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -363,11 +355,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "768px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("md")]: {
-        left: "770px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
@@ -387,11 +375,7 @@ const menuStyles = makeStyles()((theme) => {
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "768px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("md")]: {
-        left: "770px",
-        top: "320px",
+        top: "295px",
       },
 
       [theme.breakpoints.down("sm")]: {
