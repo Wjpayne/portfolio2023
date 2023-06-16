@@ -7,7 +7,7 @@ import { makeStyles } from "tss-react/mui";
 
 export const SVG = (props) => {
 
-  const {handleAboutModalOpen} = props
+  const {handleAboutModalOpen, handleProjectModalOpen} = props
 
   useEffect(() => {
     TweenMax.set(".wheel", { transformOrigin: "50% 50%" });
@@ -37,7 +37,7 @@ export const SVG = (props) => {
         viewBox="0 0 1031.41 441.18"
         className="container"
       >
-        <g className="house" id="house-one" transform="translate(380)">
+        <g className="house" onClick = {handleProjectModalOpen} id="house-one" transform="translate(380)">
           <g id="bg-fill-7" className="bg-fill">
             <path
               fill="#b6d788"

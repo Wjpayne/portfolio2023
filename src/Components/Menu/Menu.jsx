@@ -655,7 +655,7 @@ export const Menu = () => {
           handleContactModalClose={handleContactModalClose}
           modalContact={modalContact}
         ></ContactModal>
-        <SVG handleAboutModalOpen = {handleAboutModalOpen}/>
+        <SVG handleAboutModalOpen = {handleAboutModalOpen} handleProjectModalOpen = {handleProjectModalOpen}/>
       </Paper>
     </div>
   );
