@@ -28,6 +28,7 @@ const menuStyles = makeStyles()((theme) => {
     // game text and responsive attributes
 
     game: {
+      fontFamily: "Epilogue",
       left: "220px",
       top: "415px",
       position: "absolute",
@@ -48,6 +49,7 @@ const menuStyles = makeStyles()((theme) => {
     },
 
     secondGame: {
+      fontFamily: "Epilogue",
       left: "237px",
       top: "440px",
       position: "absolute",
