@@ -1,7 +1,9 @@
-import { Modal, Typography, Paper, Box, Fade } from "@mui/material";
+import { Modal, Typography, Paper, Box, Fade, Grid } from "@mui/material";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";
+import Skill from "../Menu/Skills";
+import "./aboutme.css"
 
 const modalAboutStyles = makeStyles()((theme) => {
   return {
@@ -58,32 +60,50 @@ export const AboutModal = (props) => {
             }}
             onClick={handleAboutModalClose}
           ></CloseIcon>
+          <div className = "skills">
           <Fade in={textFade} timeout={1500}>
             <Typography align="center" className={classes.textMain}>
-              Hello! My name is William. I am software enginner with a focus on
-              front-end web development.<br></br>I am proficient in the
+              Hello! My name is William. I am a software enginner with a focus
+              on front-end web development.<br></br>I am proficient in the
               following technologies. <br></br> <br></br>{" "}
-              <Box component="span" fontWeight="bold" fontSize="30px">
-                React.JS
-              </Box>{" "}
-              <br></br>{" "}
-              <Box component="span" fontWeight="bold" fontSize="30px">
-                Express
-              </Box>{" "}
-              <br></br>{" "}
-              <Box component="span" fontWeight="bold" fontSize="30px">
-                Node.JS
-              </Box>
-              <br></br>{" "}
-              <Box component="span" fontWeight="bold" fontSize="30px">
-                MongoDB
-              </Box>{" "}
-              <br></br>{" "}
-              <Box component="span" fontWeight="bold" fontSize="30px">
-                GraphQL
-              </Box>
+
+                  <div className = "skillsGrid">
+                    <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+                      alt="The logo icon for react"
+                      title="React"
+                    />
+                                        <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                      alt="The logo icon for node"
+                      title="Node"
+                    />
+                                        <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
+                      alt="The logo icon for express"
+                      title="Express"
+                    />
+                                        <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+                      alt="The logo icon for MongoDB"
+                      title="MongoDB"
+                    />
+                                        <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg"
+                      alt="The logo icon for GraphQL"
+                      title="GraphQL"
+                    />
+                                        <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+                      alt="The logo icon for PostGres"
+                      title="PostGress"
+                    />
+                  </div>
+
+             
             </Typography>
           </Fade>
+          </div>
         </Paper>
       </Modal>
     </>
