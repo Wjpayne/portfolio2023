@@ -73,6 +73,11 @@ export const AboutModal = (props) => {
                       alt="The logo icon for react"
                       title="React"
                     />
+                                                            <Skill
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      alt="The logo icon for Typescript"
+                      title="typescript"
+                    />
                                         <Skill
                       source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
                       alt="The logo icon for node"
@@ -80,7 +85,7 @@ export const AboutModal = (props) => {
                     />
                                         <Skill
                       source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
-                      alt="The logo icon for express"
+                      alt="The logo icon for Express"
                       title="Express"
                     />
                                         <Skill
@@ -93,11 +98,7 @@ export const AboutModal = (props) => {
                       alt="The logo icon for GraphQL"
                       title="GraphQL"
                     />
-                                        <Skill
-                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
-                      alt="The logo icon for PostGres"
-                      title="PostGress"
-                    />
+
                   </div>
 
              
