@@ -5,7 +5,10 @@ import gsap from "gsap/gsap-core";
 import { makeStyles } from "tss-react/mui";
 
 
-export const SVG = () => {
+export const SVG = (props) => {
+
+  const {handleAboutModalOpen} = props
+
   useEffect(() => {
     TweenMax.set(".wheel", { transformOrigin: "50% 50%" });
     TweenMax.to(".wheel", 30, {
@@ -27,7 +30,7 @@ export const SVG = () => {
 
   return (
     <div
-      // style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +85,7 @@ export const SVG = () => {
           </g>
         </g>
 
-        <g className="house" id="house-four" transform="translate(-170)">
+        <g className="house" id="house-four" transform="translate(-170)" onClick = {handleAboutModalOpen}>
           <g id="bg-fill-4" className="bg-fill">
             <path
               fill="#e4982f"

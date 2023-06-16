@@ -1,5 +1,5 @@
 import { Modal, Typography, Paper, Box, Fade } from "@mui/material";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";
 
@@ -30,11 +30,9 @@ const modalAboutStyles = makeStyles()((theme) => {
   };
 });
 export const AboutModal = (props) => {
-  const { handleAboutModalClose, modalAbout, textFade} = props;
+  const { handleAboutModalClose, modalAbout, textFade } = props;
 
   const { classes } = modalAboutStyles();
-
- 
 
   return (
     <>
@@ -55,12 +53,31 @@ export const AboutModal = (props) => {
             }}
             onClick={handleAboutModalClose}
           ></CloseIcon>
-          <Fade in = {textFade} timeout={1500}>
-          <Typography align="center" className={classes.textMain}>
-            Hello! My name is William. I am software enginner with a focus on
-            front-end web development.<br></br>I am proficient in the following
-            technologies. <br></br> <br></br> <Box component = "span" fontWeight = "bold" fontSize = "30px">React.JS</Box> <br></br> <Box component = "span" fontWeight = "bold" fontSize = "30px">Express</Box> <br></br> <Box component = "span" fontWeight = "bold" fontSize = "30px">Node.JS</Box><br></br> <Box component = "span" fontWeight = "bold" fontSize = "30px">MongoDB</Box> <br></br> <Box component = "span" fontWeight = "bold" fontSize = "30px">GraphQL</Box>
-          </Typography>
+          <Fade in={textFade} timeout={1500}>
+            <Typography align="center" className={classes.textMain}>
+              Hello! My name is William. I am software enginner with a focus on
+              front-end web development.<br></br>I am proficient in the
+              following technologies. <br></br> <br></br>{" "}
+              <Box component="span" fontWeight="bold" fontSize="30px">
+                React.JS
+              </Box>{" "}
+              <br></br>{" "}
+              <Box component="span" fontWeight="bold" fontSize="30px">
+                Express
+              </Box>{" "}
+              <br></br>{" "}
+              <Box component="span" fontWeight="bold" fontSize="30px">
+                Node.JS
+              </Box>
+              <br></br>{" "}
+              <Box component="span" fontWeight="bold" fontSize="30px">
+                MongoDB
+              </Box>{" "}
+              <br></br>{" "}
+              <Box component="span" fontWeight="bold" fontSize="30px">
+                GraphQL
+              </Box>
+            </Typography>
           </Fade>
         </Paper>
       </Modal>
