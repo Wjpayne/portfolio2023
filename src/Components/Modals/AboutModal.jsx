@@ -20,6 +20,11 @@ const modalAboutStyles = makeStyles()((theme) => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+
+      [theme.breakpoints.down("sm")]: {
+        width: "100%",
+        height: "600x",
+      },
     },
 
     textMain: {
