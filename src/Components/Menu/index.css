@@ -1,11 +1,10 @@
 .container {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    height: auto;
-    margin-top: 40px;
-    align-items: center;
-    flex-direction: column;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 40px;
+  position: relative;
   }
   
   .house {
@@ -36,10 +35,10 @@
     opacity: 1;
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 600px) {
     .container {
       display: block;
-      width: 70%;
+      width: 80%;
       margin: 0 auto;
       height: auto;
       margin-top: 40px;

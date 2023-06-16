@@ -2,7 +2,9 @@ import { Paper, Slide, Typography, Fade } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import React, { useRef, useState, useEffect } from "react";
 import { SVG } from "./SVG";
-
+import { AboutModal } from "../Modals/AboutModal";
+import { ProjectModal } from "../Modals/ProjectModal";
+import { ContactModal } from "../Modals/ContactModal";
 
 const menuStyles = makeStyles()((theme) => {
   return {
@@ -11,62 +13,56 @@ const menuStyles = makeStyles()((theme) => {
       width: "1200px",
       height: "675px",
 
-
       [theme.breakpoints.down("lg")]: {
-        position: "relative",
         width: "900px",
         height: "500px",
-
-        
       },
 
-      [theme.breakpoints.down("xs")]: {
-        position: "relative",
-        width: "100%",
-        height: "240px",
-
+      [theme.breakpoints.down("sm")]: {
+        width: "390px",
+        height: "300px",
       },
     },
 
     // game text and responsive attributes
 
     game: {
-      fontFamily: "Orbitron",
-      left: "210px",
+      left: "220px",
       top: "415px",
       position: "absolute",
       color: "#2565ae",
+      textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "153px",
         top: "320px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "130px",
+        left: "153px",
         top: "320px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "19%",
-        top: "62%",
+      [theme.breakpoints.down("sm")]: {
+        left: "60px",
+        top: "140px",
       },
     },
 
     secondGame: {
-      fontFamily: "Orbitron",
-      left: "225px",
-      display: "flex",
+      left: "237px",
+      top: "440px",
       position: "absolute",
       color: "#2565ae",
+      textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
         left: "170px",
-        top: "345px",
+        top: "348px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "140px",
-        top: "345px",
+        left: "164px",
+        top: "348px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "21%",
-        top: "66%",
+      [theme.breakpoints.down("sm")]: {
+        left: "70px",
+        top: "158px",
       },
     },
 
@@ -82,12 +78,12 @@ const menuStyles = makeStyles()((theme) => {
         top: "320px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "100px",
+        left: "280px",
         top: "320px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "39%",
-        top: "60%",
+      [theme.breakpoints.down("sm")]: {
+        left: "147px",
+        top: "135px",
       },
     },
 
@@ -100,18 +96,15 @@ const menuStyles = makeStyles()((theme) => {
       position: "absolute",
       color: "#2565ae",
       textDecoration: "none",
+
       [theme.breakpoints.down("lg")]: {
         left: "340px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "280px",
-        top: "320px",
-      },
-      
-      [theme.breakpoints.down("xs")]: {
-        left: "39%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "147px",
+        top: "125px",
       },
     },
 
@@ -128,13 +121,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "340px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "280px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "39%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "147px",
+        top: "125px",
       },
     },
 
@@ -151,17 +141,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "340px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "340px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("md")]: {
-        left: "280px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "39%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "147px",
+        top: "125px",
       },
     },
 
@@ -177,13 +160,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "465px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "385px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "51.5%",
-        top: "140px",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "203px",
+        top: "125px",
       },
     },
 
@@ -200,13 +180,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "465px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "390px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "51.5%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "203px",
+        top: "125px",
       },
     },
 
@@ -223,13 +200,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "465px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "390px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "51.5%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "203px",
+        top: "125px",
       },
     },
 
@@ -246,13 +220,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "465px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "390px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "51.5%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "203px",
+        top: "125px",
       },
     },
 
@@ -263,18 +234,15 @@ const menuStyles = makeStyles()((theme) => {
       position: "absolute",
       left: "828px",
       color: "#2565ae",
-      textDecoration: "none",
+
       [theme.breakpoints.down("lg")]: {
         left: "623px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "545px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "66.5%",
-        top: "140px",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "270px",
+        top: "125px",
       },
     },
 
@@ -286,18 +254,15 @@ const menuStyles = makeStyles()((theme) => {
       transform: "rotate(90deg)",
       transformOrigin: "0 50%",
       transition: "1s",
-      textDecoration: "none",
+
       [theme.breakpoints.down("lg")]: {
         left: "623px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "520px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "66.5%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "270px",
+        top: "125px",
       },
     },
 
@@ -314,13 +279,10 @@ const menuStyles = makeStyles()((theme) => {
         left: "623px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "520px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "66.5%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "270px",
+        top: "125px",
       },
     },
 
@@ -332,18 +294,15 @@ const menuStyles = makeStyles()((theme) => {
       left: "828px",
       color: "#2565ae",
       transition: "1s",
-      textDecoration: "none",
+
       [theme.breakpoints.down("lg")]: {
         left: "623px",
         top: "320px",
       },
-      [theme.breakpoints.down("md")]: {
-        left: "520px",
-        top: "320px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        left: "66.5%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "270px",
+        top: "125px",
       },
     },
 
@@ -356,16 +315,17 @@ const menuStyles = makeStyles()((theme) => {
       color: "#2565ae",
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
-        left: "768px",
+        left: "780px",
         top: "320px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "640px",
+        left: "770px",
         top: "320px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "81%",
-        top: "140px",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "333px",
+        top: "125px",
       },
     },
     contactRotate: {
@@ -378,16 +338,17 @@ const menuStyles = makeStyles()((theme) => {
       transition: "1s",
       textDecoration: "none",
       [theme.breakpoints.down("lg")]: {
-        left: "768px",
+        left: "780px",
         top: "320px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "640px",
+        left: "770px",
         top: "320px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "81%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "333px",
+        top: "125px",
       },
     },
 
@@ -405,12 +366,13 @@ const menuStyles = makeStyles()((theme) => {
         top: "320px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "640px",
+        left: "770px",
         top: "320px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "81%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "333px",
+        top: "125px",
       },
     },
 
@@ -428,43 +390,49 @@ const menuStyles = makeStyles()((theme) => {
         top: "320px",
       },
       [theme.breakpoints.down("md")]: {
-        left: "640px",
+        left: "770px",
         top: "320px",
       },
-      [theme.breakpoints.down("xs")]: {
-        left: "81%",
-        top: "60%",
+
+      [theme.breakpoints.down("sm")]: {
+        left: "333px",
+        top: "125px",
       },
     },
 
     text: {
+      cursor: "pointer",
       fontSize: "30px",
       textDecoration: "none",
+
       [theme.breakpoints.down("lg")]: {
         fontSize: "25px",
       },
 
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "15px",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "14px",
       },
     },
     gameText: {
       fontSize: "17px",
-      [theme.breakpoints.down("lg")]: {
-        fontSize: "14px",
-      },
+      // [theme.breakpoints.down("lg")]: {
+      //   fontSize: "17px",
+      // },
+      // [theme.breakpoints.down("md")]: {
+      //   fontSize: "14px",
+      // },
 
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "7px",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "11px",
       },
     },
     secondGameText: {
       fontSize: "17px",
-      [theme.breakpoints.down("lg")]: {
-        fontSize: "14px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "7px",
+      // [theme.breakpoints.down("lg")]: {
+      //   fontSize: "14px",
+      // },
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "11px",
       },
     },
 
@@ -476,6 +444,38 @@ const menuStyles = makeStyles()((theme) => {
 
 export const Menu = () => {
   const { classes } = menuStyles();
+
+  //set states for modals
+
+  const [modalAbout, setModalAbout] = useState(false);
+  const [modalProject, setModalProject] = useState(false);
+  const [modalContact, setModalContact] = useState(false);
+
+  //handlers for modal open and close
+
+  const handleAboutModalOpen = () => {
+    setModalAbout(true);
+  };
+
+  const handleAboutModalClose = () => {
+    setModalAbout(false);
+  };
+
+  const handleProjectModalOpen = () => {
+    setModalProject(true);
+  };
+
+  const handleProjectModalClose = () => {
+    setModalProject(false);
+  };
+
+  const handleContactModalOpen = () => {
+    setModalContact(true);
+  };
+
+  const handleContactModalClose = () => {
+    setModalContact(false);
+  };
 
   const [about, setAbout] = useState(false);
   const [project, setProject] = useState(false);
@@ -600,36 +600,50 @@ export const Menu = () => {
     }, 3700);
   }, []);
   return (
-    <>
+    <div>
       <Paper className={classes.paper} elevation={3}>
-        <SVG />
         <a target="blank" href="https://wjpayne.github.io/frogger/">
           <div className={classes.game}>
             <Fade in={game} timeout={1000}>
-              <h1 className={classes.gameText}>Wanna play</h1>
+              <Typography className={classes.gameText}>Wanna play</Typography>
             </Fade>
           </div>
 
           <div className={classes.secondGame}>
             <Fade in={game} timeout={500}>
-              <h1 className={classes.secondGameText}>a game?</h1>
+              <Typography className={classes.secondGameText}>
+                a game?
+              </Typography>
             </Fade>
           </div>
         </a>
-        
-          <div className={classes[aboutRef.current]}>
-            <Slide direction="left" in={about} mountOnEnter unmountOnExit>
-              <Typography className={classes.text}>About me</Typography>
-            </Slide>
-          </div>
-        
-       
-          <div className={classes[projectRef.current]}>
-            <Slide direction="right" in={project} mountOnEnter unmountOnExit>
-              <Typography className={classes.text}>Projects</Typography>
-            </Slide>
-          </div>
-    
+
+        <div
+          onClick={handleAboutModalOpen}
+          className={classes[aboutRef.current]}
+        >
+          <Slide direction="left" in={about} mountOnEnter unmountOnExit>
+            <Typography className={classes.text}>About me</Typography>
+          </Slide>
+        </div>
+        <AboutModal
+          handleAboutModalClose={handleAboutModalClose}
+          modalAbout={modalAbout}
+        ></AboutModal>
+
+        <div
+          onClick={handleProjectModalOpen}
+          className={classes[projectRef.current]}
+        >
+          <Slide direction="right" in={project} mountOnEnter unmountOnExit>
+            <Typography className={classes.text}>Projects</Typography>
+          </Slide>
+        </div>
+        <ProjectModal
+          handleProjectModalClose={handleProjectModalClose}
+          modalProject={modalProject}
+        ></ProjectModal>
+
         <a target="blank" href="https://william-payne-resume.herokuapp.com/">
           <div className={classes[resumeRef.current]}>
             <Slide direction="left" in={resume} mountOnEnter unmountOnExit>
@@ -637,14 +651,21 @@ export const Menu = () => {
             </Slide>
           </div>
         </a>
-        
-          <div className={classes[contactRef.current]}>
-            <Slide direction="right" in={contact} mountOnEnter unmountOnExit>
-              <Typography className={classes.text}>Contact</Typography>
-            </Slide>
-          </div>
-        
+
+        <div
+          onClick={handleContactModalOpen}
+          className={classes[contactRef.current]}
+        >
+          <Slide direction="right" in={contact} mountOnEnter unmountOnExit>
+            <Typography className={classes.text}>Contact</Typography>
+          </Slide>
+        </div>
+        <ContactModal
+          handleContactModalClose={handleContactModalClose}
+          modalContact={modalContact}
+        ></ContactModal>
+        <SVG />
       </Paper>
-      </>
+    </div>
   );
 };

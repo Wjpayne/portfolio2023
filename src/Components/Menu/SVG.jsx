@@ -4,12 +4,7 @@ import { TweenMax, Linear } from "gsap";
 import gsap from "gsap/gsap-core";
 import { makeStyles } from "tss-react/mui";
 
-const menuStyles = makeStyles()((theme) => ({
-  game: {
-    fontFamily: "Orbitron",
-    color: "#2565ae",
-  },
-}));
+
 export const SVG = () => {
   useEffect(() => {
     TweenMax.set(".wheel", { transformOrigin: "50% 50%" });
@@ -32,7 +27,7 @@ export const SVG = () => {
 
   return (
     <div
-      style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      // style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
