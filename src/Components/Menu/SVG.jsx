@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import "./index.css";
 import { TweenMax, Linear } from "gsap";
 import gsap from "gsap/gsap-core";
-import { makeStyles } from "tss-react/mui";
+
 
 
 export const SVG = (props) => {
