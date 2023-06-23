@@ -636,7 +636,7 @@ export const Menu = () => {
           modalProject={modalProject}
         ></ProjectModal>
 
-        <a target="blank" href="https://william-payne-resume.herokuapp.com/">
+        <a target="blank" href="https://updated-resume-henna.vercel.app/">
           <div className={classes[resumeRef.current]}>
             <Slide direction="left" in={resume} mountOnEnter unmountOnExit>
               <Typography className={classes.text}>Resume</Typography>
