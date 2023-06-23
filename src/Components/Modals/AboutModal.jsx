@@ -84,7 +84,7 @@ export const AboutModal = (props) => {
                       title="Node"
                     />
                                         <Skill
-                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                      source="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
                       alt="The logo icon for Express"
                       title="Express"
                     />
