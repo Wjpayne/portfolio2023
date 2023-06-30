@@ -1,4 +1,4 @@
-import { Modal, Typography, Paper, Box, Fade, Grid } from "@mui/material";
+import { Modal, Typography, Paper, Fade} from "@mui/material";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";
