@@ -7,6 +7,8 @@ import Carousel from "react-material-ui-carousel";
 
 
 export const CarouselProject = (props) => {
+
+  // object for images
   const items = [
     {
       image: Dijkstra1,

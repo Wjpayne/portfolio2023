@@ -7,10 +7,9 @@ import {
   Button,
   Alert,
 } from "@mui/material";
-import React, { useState } from "react";
+
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const modalContactStyles = makeStyles()((theme) => {
@@ -51,7 +50,7 @@ const modalContactStyles = makeStyles()((theme) => {
         backgroundColor: "white",
       },
       fontSize: "20px",
-      margin: "15px"
+      margin: "15px",
     },
   };
 });
@@ -107,7 +106,13 @@ export const ContactModal = (props) => {
 
             <FormControl>
               <FormLabel
-                sx={{ color: "#2565ae", fontSize: "30px", display: "flex", justifyContent: "center", margin: "10px" }}
+                sx={{
+                  color: "#2565ae",
+                  fontSize: "30px",
+                  display: "flex",
+                  justifyContent: "center",
+                  margin: "10px",
+                }}
               >
                 Feel free to contact me!
               </FormLabel>
@@ -139,7 +144,7 @@ export const ContactModal = (props) => {
                 Submit
               </Button>
               {success && (
-                <Alert severity="success" sx = {{fontSize: "20px"}}>
+                <Alert severity="success" sx={{ fontSize: "20px" }}>
                   Thank you! I will get back to you shortly
                 </Alert>
               )}

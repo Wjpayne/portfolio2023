@@ -8,7 +8,7 @@ import gsap from "gsap/gsap-core";
 export const SVG = (props) => {
 
   const {handleAboutModalOpen, handleProjectModalOpen, handleContactModalOpen} = props
-
+  // used GASP library to animate all SVGs
   useEffect(() => {
     TweenMax.set(".wheel", { transformOrigin: "50% 50%" });
     TweenMax.to(".wheel", 30, {

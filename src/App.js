@@ -4,7 +4,7 @@ import { Menu } from "./Components/Menu/Menu";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Epilogue"].join(","),
+    fontFamily: ["Epilogue"]
   },
 });
 

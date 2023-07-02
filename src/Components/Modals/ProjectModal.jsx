@@ -1,4 +1,4 @@
-import { Modal, Typography, Paper, Card, CardHeader, CardMedia, CardContent, IconButton, Link } from "@mui/material";
+import { Modal, Paper, Card, CardHeader, CardMedia, CardContent, IconButton, Link } from "@mui/material";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";

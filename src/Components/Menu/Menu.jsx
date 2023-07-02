@@ -397,14 +397,11 @@ const menuStyles = makeStyles()((theme) => {
         fontSize: "14px",
       },
     },
+
+    //text styles
     gameText: {
       fontSize: "17px",
-      // [theme.breakpoints.down("lg")]: {
-      //   fontSize: "17px",
-      // },
-      // [theme.breakpoints.down("md")]: {
-      //   fontSize: "14px",
-      // },
+
 
       [theme.breakpoints.down("sm")]: {
         fontSize: "11px",
@@ -412,16 +409,9 @@ const menuStyles = makeStyles()((theme) => {
     },
     secondGameText: {
       fontSize: "17px",
-      // [theme.breakpoints.down("lg")]: {
-      //   fontSize: "14px",
-      // },
       [theme.breakpoints.down("sm")]: {
         fontSize: "11px",
       },
-    },
-
-    scroll: {
-      scrollBehavior: "smooth",
     },
   };
 });
@@ -434,7 +424,9 @@ export const Menu = () => {
   const [modalAbout, setModalAbout] = useState(false);
   const [modalProject, setModalProject] = useState(false);
   const [modalContact, setModalContact] = useState(false);
+  //set state for game text fade in and out
   const [textFade, setTextFade] = useState(false);
+  // set state for alarm text for email form
   const [success, setSuccess] = useState(false)
 
   //handlers for modal open and close
@@ -466,7 +458,7 @@ export const Menu = () => {
     setSuccess(false)
   };
 
-  //set init state
+  //set init state for wods coming into screen
 
   const [about, setAbout] = useState(false);
   const [project, setProject] = useState(false);
@@ -480,6 +472,8 @@ export const Menu = () => {
   const [projectMove, setProjectMove] = useState("project");
   const [resumeMove, setResumeMove] = useState("resume");
   const [contactMove, setContactMove] = useState("contact");
+
+  //set refs DOM 
 
   const aboutRef = useRef();
   const projectRef = useRef();
@@ -504,7 +498,7 @@ export const Menu = () => {
     }, 4000);
   }, []);
 
-  //set timing of about
+  //set timing for about
   useEffect(() => {
     setTimeout(() => {
       setAbout(true);
