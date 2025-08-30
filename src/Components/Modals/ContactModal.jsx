@@ -84,7 +84,7 @@ export const ContactModal = (props) => {
         }
       );
 
-    e.target.reset();
+    ;
   };
   return (
     <>
