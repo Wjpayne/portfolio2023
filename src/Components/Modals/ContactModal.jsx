@@ -66,10 +66,10 @@ export const ContactModal = (props) => {
 
     emailjs
       .sendForm(
-        "service_j7b1xz2",
+        "service_ugx72qj",
         "template_14fp4jr",
         e.target,
-        "oMjHK1YLzz_lDQSQp"
+        "ivtg-qlx32QWWU4vX"
       )
       .then(
         (result) => {
