@@ -51,6 +51,11 @@ const modalContactStyles = makeStyles()((theme) => {
       },
       fontSize: "20px",
       margin: "15px",
+      position: "absolute",
+      bottom: "0",
+      left: "0px",
+      right: "0px",
+      margin: "auto",
     },
   };
 });
