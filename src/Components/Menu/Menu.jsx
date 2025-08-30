@@ -458,7 +458,7 @@ export const Menu = () => {
     setSuccess(false)
   };
 
-  //set init state for wods coming into screen
+  //set init state for words coming into screen
 
   const [about, setAbout] = useState(false);
   const [project, setProject] = useState(false);
