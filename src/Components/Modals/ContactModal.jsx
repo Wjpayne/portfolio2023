@@ -17,10 +17,7 @@ const modalContactStyles = makeStyles()((theme) => {
     modal: {
       width: "600px",
       height: "600px",
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
+
       boxShadow: 24,
       pt: 2,
       px: 4,
