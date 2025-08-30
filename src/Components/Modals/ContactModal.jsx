@@ -49,7 +49,7 @@ const modalContactStyles = makeStyles()((theme) => {
       fontSize: "20px",
       margin: "15px",
       position: "absolute",
-      bottom: "0",
+      bottom: "0px",
       left: "0px",
       right: "0px",
       margin: "auto",
