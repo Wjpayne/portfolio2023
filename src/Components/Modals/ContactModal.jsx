@@ -11,7 +11,6 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 
 const modalContactStyles = makeStyles()((theme) => {
   return {
@@ -70,9 +69,9 @@ export const ContactModal = (props) => {
     emailjs
       .sendForm(
         "service_39frq88",
-        "template_mgqqb13",
-        formRef.current,
-        {publicKey: "ivtg-qlx32QWWU4vX"}
+        "template_43684yo",
+        e.target,
+        "ivtg-qlx32QWWU4vX"
       )
       .then(
         (result) => {
@@ -84,7 +83,7 @@ export const ContactModal = (props) => {
         }
       );
 
-    ;
+    e.target.reset();
   };
   return (
     <>
@@ -95,7 +94,7 @@ export const ContactModal = (props) => {
         aria-describedby="about william payne"
       >
         <Paper className={classes.modal}>
-          <form ref = {formRef} onSubmit={sendEmail}>
+          <form onSubmit={sendEmail}>
             <CloseIcon
               sx={{
                 position: "absolute",
