@@ -61,8 +61,6 @@ export const ContactModal = (props) => {
 
   //set up for contact form
 
-  const formRef = useRef
-
   const sendEmail = (e) => {
     e.preventDefault();
 
