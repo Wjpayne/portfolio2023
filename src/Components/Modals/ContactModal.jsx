@@ -70,7 +70,7 @@ export const ContactModal = (props) => {
     emailjs
       .sendForm(
         "service_39frq88",
-        "template_43684yo",
+        "template_mgqqb13",
         formRef.current,
         {publicKey: "ivtg-qlx32QWWU4vX"}
       )
