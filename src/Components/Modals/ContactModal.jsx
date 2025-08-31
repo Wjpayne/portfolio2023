@@ -11,13 +11,17 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "tss-react/mui";
 import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const modalContactStyles = makeStyles()((theme) => {
   return {
     modal: {
       width: "600px",
       height: "600px",
-
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
       boxShadow: 24,
       pt: 2,
       px: 4,
@@ -47,12 +51,7 @@ const modalContactStyles = makeStyles()((theme) => {
         backgroundColor: "white",
       },
       fontSize: "20px",
-      margin: "15px",
-      position: "absolute",
-      bottom: "0px",
-      left: "0px",
-      right: "0px",
-      margin: "auto",
+      margin: "30px",
     },
   };
 });
@@ -63,6 +62,8 @@ export const ContactModal = (props) => {
 
   //set up for contact form
 
+  const form = useRef()
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -70,8 +71,8 @@ export const ContactModal = (props) => {
       .sendForm(
         "service_39frq88",
         "template_mgqqb13",
-        e.target,
-        "ivtg-qlx32QWWU4vX"
+        form.current,
+        "ivtg-qlx32QWWU4vX",
       )
       .then(
         (result) => {
@@ -94,7 +95,7 @@ export const ContactModal = (props) => {
         aria-describedby="about william payne"
       >
         <Paper className={classes.modal}>
-          <form onSubmit={sendEmail}>
+          <form ref = {form} onSubmit={sendEmail}>
             <CloseIcon
               sx={{
                 position: "absolute",
@@ -119,7 +120,7 @@ export const ContactModal = (props) => {
                 Feel free to contact me!
               </FormLabel>
               <TextField
-                name="from_name"
+                name="user_name"
                 className={classes.input}
                 required
                 type="text"
@@ -136,7 +137,6 @@ export const ContactModal = (props) => {
                 name="message"
                 className={classes.inputMessage}
                 required
-                type="text"
                 label="Enter your message"
                 multiline={true}
                 rows={5}
