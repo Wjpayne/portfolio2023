@@ -402,7 +402,6 @@ const menuStyles = makeStyles()((theme) => {
     gameText: {
       fontSize: "17px",
 
-
       [theme.breakpoints.down("sm")]: {
         fontSize: "11px",
       },
@@ -427,7 +426,7 @@ export const Menu = () => {
   //set state for game text fade in and out
   const [textFade, setTextFade] = useState(false);
   // set state for alarm text for email form
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false);
 
   //handlers for modal open and close
 
@@ -455,7 +454,7 @@ export const Menu = () => {
 
   const handleContactModalClose = () => {
     setModalContact(false);
-    setSuccess(false)
+    setSuccess(false);
   };
 
   //set init state for words coming into screen
@@ -473,7 +472,7 @@ export const Menu = () => {
   const [resumeMove, setResumeMove] = useState("resume");
   const [contactMove, setContactMove] = useState("contact");
 
-  //set refs DOM 
+  //set refs DOM
 
   const aboutRef = useRef();
   const projectRef = useRef();
@@ -487,15 +486,8 @@ export const Menu = () => {
 
   // set timing for game
   useEffect(() => {
-    setInterval(() => {
-      setGame(true);
-    }, 2000);
-  }, []);
-
-  useEffect(() => {
-    setInterval(() => {
-      setGame(false);
-    }, 4000);
+    const interval = setInterval(() => setGame((prev) => !prev), 1500);
+    return () => clearInterval(interval);
   }, []);
 
   //set timing for about
@@ -649,10 +641,14 @@ export const Menu = () => {
         <ContactModal
           handleContactModalClose={handleContactModalClose}
           modalContact={modalContact}
-          success = {success}
-          setSuccess  = {setSuccess}
+          success={success}
+          setSuccess={setSuccess}
         ></ContactModal>
-        <SVG handleAboutModalOpen = {handleAboutModalOpen} handleProjectModalOpen = {handleProjectModalOpen} handleContactModalOpen = {handleContactModalOpen}/>
+        <SVG
+          handleAboutModalOpen={handleAboutModalOpen}
+          handleProjectModalOpen={handleProjectModalOpen}
+          handleContactModalOpen={handleContactModalOpen}
+        />
       </Paper>
     </div>
   );
