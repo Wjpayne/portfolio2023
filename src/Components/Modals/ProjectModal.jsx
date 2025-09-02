@@ -93,7 +93,7 @@ export const ProjectModal = (props) => {
           </Card>
           <Card sx={{ width: "400px", height: "90%", margin: "20px" }}>
             <CardHeader
-              sx={{ color: "black" }}
+              sx={{ color: "black", fontWeight: "bold" }}
               title="Inventory Management System"
               subheader="A Web App that keeps track of inventory for a small business. Has a complete front and backend using the MERN stack"
             />
