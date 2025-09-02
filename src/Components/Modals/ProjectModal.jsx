@@ -66,7 +66,7 @@ export const ProjectModal = (props) => {
         <Paper className={classes.modal}>
           <Card sx={{ width: "400px", height: "90%", margin: "20px" }}>
             <CardHeader
-              sx={{ color: "black" }}
+              sx={{ color: "black", fontWeight: "bold" }}
               title="Dijkstra Visualizer"
               subheader="A Web App that let's you have a little fun with algorithms (This app is Web only and not available on mobile devices)"
             />
