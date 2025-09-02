@@ -423,6 +423,7 @@ export const Menu = () => {
   const [modalAbout, setModalAbout] = useState(false);
   const [modalProject, setModalProject] = useState(false);
   const [modalContact, setModalContact] = useState(false);
+  
   //set state for game text fade in and out
   const [textFade, setTextFade] = useState(false);
   // set state for alarm text for email form
