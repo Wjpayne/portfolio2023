@@ -103,7 +103,7 @@ export const ProjectModal = (props) => {
               <a
                 style={{ color: "black" }}
                 target="blank"
-                href="https://dijkstra-visualizer-chi.vercel.app/"
+                href="https://williampayneportfolio-pearl.vercel.app/"
               >
                 here
               </a>
@@ -111,7 +111,7 @@ export const ProjectModal = (props) => {
                 <Link
                   sx={{ color: "black", }}
                   target="blank"
-                  href="https://github.com/Wjpayne/dijkstra-visualizer"
+                  href="https://github.com/Wjpayne/Inventory-Management"
                 >
                   <GitHub />
                 </Link>
