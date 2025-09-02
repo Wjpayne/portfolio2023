@@ -66,7 +66,7 @@ export const ProjectModal = (props) => {
         <Paper className={classes.modal}>
           <Card sx={{ width: "400px", height: "90%", margin: "20px" }}>
             <CardHeader
-              sx={{ color: "#2565ae" }}
+              sx={{ color: "black" }}
               title="Dijkstra Visualizer"
               subheader="A Web App that let's you have a little fun with algorithms (This app is Web only and not available on mobile devices)"
             />
@@ -93,7 +93,7 @@ export const ProjectModal = (props) => {
           </Card>
           <Card sx={{ width: "400px", height: "90%", margin: "20px" }}>
             <CardHeader
-              sx={{ color: "#2565ae" }}
+              sx={{ color: "black" }}
               title="Inventory Management System"
               subheader="A Web App that keeps track of inventory for a small business. Has a complete front and backend using the MERN stack"
             />
