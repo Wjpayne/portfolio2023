@@ -101,6 +101,7 @@ export const ProjectModal = (props) => {
             <CardContent sx={{ marginTop: "70px" }}>
               Check out the live project{" "}
               <a
+                aria-label="link to inventory management system"
                 style={{ color: "black" }}
                 target="blank"
                 href="https://inventory-management-drab.vercel.app/"
